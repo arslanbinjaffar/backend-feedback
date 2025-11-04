@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18.x",
+      "handler": "dist/main.js"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ]
+}
